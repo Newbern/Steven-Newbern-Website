@@ -34,17 +34,19 @@
         
     </head>
     <body>
-        <!-- Header -->
-        <header class="header"><?php if(file_exists($header)) {include($header);}?></header>
+        <div class="left-div">
+            <!-- Header -->
+            <header><?php if(file_exists($header)) {include($header);}?></header>
 
-        <!-- Navigation -->
-        <nav class="navigation"><?php if(file_exists($nav)) {include($nav);}?></nav>
-        
+            <!-- Navigation -->
+            <nav><?php if(file_exists($nav)) {include($nav);}?></nav>
+
+            <!-- Footer -->
+            <footer><?php if (file_exists($footer)) {include($footer);} ?></footer>
+
+        </div>
         <!-- Main Content Area -->
-        <main style='min-height:69%'><?php if (file_exists($content)) {include($content);} ?></main>
-
-        <!-- Footer -->
-        <footer class="footer"><?php if (file_exists($footer)) {include($footer);} ?></footer>
+            <main><?php if (file_exists($content)) {include($content);} ?></main>
     </body>
         
     <!-- Base JavaScript -->
