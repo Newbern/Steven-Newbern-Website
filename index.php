@@ -2,12 +2,12 @@
 // Allowed Pages
 $allowedPages = ['home', 'about', 'projects', 'services', 'contact', '404'];
 
-// Getting current page
-$page = $_GET['page'] ?? '';
+// Getting Current Page
+$page = $_GET['page'] ?? 'home';
 
-// Validating page
-if (!in_array($page, $allowedPages)) {
-    $page = 'home';
+// Validating Page
+if (!in_array($page, $allowedPages, true)) {
+    $page = '404';
 }
 
 // Header, Footer, Navigation
@@ -15,22 +15,27 @@ $header = "app/templates/header.html";
 $footer = "app/templates/footer.html";
 $nav = "app/templates/nav.html";
 
-
-// Including Page-specific content
-// Checking Content
+// Page-Specific Files
 $content = "app/pages/{$page}.html";
+
 if (!file_exists($content)) {
     $content = "app/pages/{$page}.php";
 }
+
 $css = "app/css/{$page}.css";
 $js = "app/js/{$page}.js";
 $backend = "app/backend/{$page}.php";
 $seo = "app/seo/{$page}.html";
 
-// Including the Backend Variables before loading the template
+// Set HTTP Status Code
+if ($page === '404') {
+    http_response_code(404);
+}
+
+// Include Backend Variables
 if (file_exists($backend)) {
     include($backend);
 }
-// Loading the Template
-include("app/templates/base.php");
 
+// Load Template
+include("app/templates/base.php");

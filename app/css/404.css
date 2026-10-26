@@ -1,0 +1,143 @@
+
+/* 404 Page Styling */
+
+/* Main Content */
+.main-block {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 50px 0;
+    margin-bottom: 30px;
+}
+
+.section-label {
+    color: #af4428;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    color: #f5f5f5;
+}
+
+.hero-section p {
+    color: #c4c4c4;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px 12px 10px 0;
+    background-color: #af4428;
+    color: #f5f5f5;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #92371f;
+}
+
+.link-site {
+    color: #af4428;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link-site:hover {
+    color: #f5f5f5;
+}
+
+/* Helpful Links Section */
+.about-section {
+    padding: 30px 0;
+    margin-bottom: 30px;
+}
+
+.about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #f5f5f5;
+}
+
+.about-section p {
+    color: #c4c4c4;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Link List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.skills-list a {
+    display: inline-block;
+    padding: 10px 14px;
+    background-color: #262626;
+    border: 1px solid #414141;
+    border-radius: 4px;
+    color: #af4428;
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.skills-list a:hover {
+    background-color: #303030;
+    border-color: #af4428;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .main-block {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-section {
+        padding: 35px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills-list {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-right: 6px;
+    }
+}
